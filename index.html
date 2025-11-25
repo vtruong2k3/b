@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thư Chúc Mạnh Khỏe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-pink-100 via-rose-100 to-pink-200 min-h-screen flex items-center justify-center relative"
+  >
+    <!-- Screen 1: Welcome with Name & Photo -->
+    <div id="welcomeScreen" class="text-center fade-in">
+      <!-- Profile Image -->
+      <div class="mb-8">
+        <div
+          class="w-48 h-48 mx-auto rounded-full border-8 border-white shadow-2xl overflow-hidden bg-gradient-to-br from-pink-300 to-rose-300 profile-img"
+        >
+          <img
+            id="profileImage"
+            src="https://via.placeholder.com/200/FFB6C1/FFFFFF?text=😊"
+            alt="Profile"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      <!-- Name -->
+      <h1
+        id="userName"
+        class="text-5xl font-bold bg-gradient-to-r from-pink-500 to-rose-500 text-transparent bg-clip-text mb-4"
+      >
+        Chào bạn! 💖
+      </h1>
+
+      <p class="text-2xl text-pink-600 font-semibold mb-8">
+        Có một món quà đặc biệt dành cho bạn
+      </p>
+
+      <!-- Click Button -->
+      <button
+        id="clickButton"
+        class="pulse-button bg-gradient-to-r from-pink-400 via-rose-400 to-pink-500 text-white text-2xl font-bold px-16 py-8 rounded-full shadow-2xl hover:shadow-pink-300 transition-all duration-300 hover:scale-110"
+      >
+        🎁 Nhấn vào đây 🎁
+      </button>
+
+      <!-- Floating decorations -->
+      <div class="sparkle" style="top: 15%; left: 15%; font-size: 30px">✨</div>
+      <div
+        class="sparkle"
+        style="top: 25%; right: 15%; font-size: 25px; animation-delay: 0.5s"
+      >
+        ⭐
+      </div>
+      <div
+        class="sparkle"
+        style="bottom: 25%; left: 20%; font-size: 35px; animation-delay: 1s"
+      >
+        💫
+      </div>
+      <div
+        class="sparkle"
+        style="bottom: 35%; right: 20%; font-size: 28px; animation-delay: 1.5s"
+      >
+        ✨
+      </div>
+    </div>
+
+    <!-- Screen 2: Big Bouquet -->
+    <div
+      id="bouquetScreen"
+      class="hidden text-center flex items-center justify-center min-h-screen"
+    >
+  
+      <div class="bouquet-appear cursor-pointer bounce-hover" id="bouquetClick">
+        <img
+          src="./assets/image/ChatGPT Image 09_59_40 25 thg 11, 2025.png"
+          alt="Bó hoa hồng"
+          class="w-96 h-96 mx-auto drop-shadow-2xl"
+          id="bouquetImage"
+        />
+        <p class="text-3xl font-semibold text-pink-600 mt-8 animate-pulse">Tặng em hoa nè! 🌹</p>
+        <p class="text-3xl font-bold text-pink-600 mt-8 animate-pulse">
+          👆 Nhấn vào bó hoa! 👆
+        </p>
+      </div>
+    </div>
+
+    <!-- Screen 2.5: Envelope Opening Animation -->
+    <div
+      id="envelopeScreen"
+      class="hidden flex items-center justify-center min-h-screen"
+    >
+      <div class="envelope-container">
+        <div class="envelope">
+          <div class="envelope-back"></div>
+          <div class="envelope-front"></div>
+          <div class="envelope-seal">💖</div>
+          <div class="envelope-top" id="envelopeTop"></div>
+          <div class="letter-paper" id="letterPaper">
+            <div class="p-6 text-center">
+              <div class="text-6xl mb-4">💌</div>
+              <p class="text-pink-600 font-bold text-xl">Đang mở thư...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen 3: Letter -->
+    <div id="letterScreen" class="hidden max-w-4xl mx-auto p-6 w-full">
+      <div
+        class="bg-white rounded-3xl shadow-2xl overflow-hidden opacity-0"
+        id="letterContent"
+        style="transition: opacity 1s ease-in"
+      >
+        <!-- Letter Header -->
+        <div
+          class="bg-gradient-to-r from-pink-400 via-rose-400 to-pink-500 p-8 text-center relative overflow-hidden"
+        >
+          <div
+            class="heart-float"
+            style="top: 20px; left: 30px; font-size: 30px"
+          >
+            💖
+          </div>
+          <div
+            class="heart-float"
+            style="
+              top: 40px;
+              right: 40px;
+              font-size: 25px;
+              animation-delay: 0.5s;
+            "
+          >
+            💕
+          </div>
+          <div
+            class="heart-float"
+            style="
+              bottom: 30px;
+              left: 50px;
+              font-size: 28px;
+              animation-delay: 1s;
+            "
+          >
+            💗
+          </div>
+          <div
+            class="heart-float"
+            style="
+              bottom: 20px;
+              right: 30px;
+              font-size: 32px;
+              animation-delay: 1.5s;
+            "
+          >
+            💝
+          </div>
+
+          <h1 class="text-4xl font-bold text-white mb-2">
+            Gửi em nhé <span id="letterName">
+          </h1>
+         
+        </div>
+
+        <!-- Letter Content -->
+        <div class="py-12 bg-gradient-to-b from-pink-50 to-white">
+          <div class="text-center text-8xl mb-8">🌸💐🌸</div>
+
+          <!-- Message -->
+          <div class="px-12 text-center space-y-6">
+            <p class="text-3xl font-bold text-pink-600">
+              Bị ốm chắc mệt lắm ha… 🥺
+            </p>
+
+            <div
+              class="bg-pink-50 rounded-2xl p-8 space-y-5 text-lg text-gray-700 leading-relaxed"
+            >
+              <p class="text-xl">
+                Hihi!! Làm cái này cho em vui mau khỏi ốm nà. Ăn uống đầy đủ , uống nhiều nước, và uống thuốc đúng giờ nhá. Nghỉ ngơi đi cho mau khỏi ôm học tập mình để sau nhé , Sức khoẻ của mình vẫn là quan trong nhất . Em mau khoẻ nha.
+              </p>
+             
+            </div>
+
+            
+        <div class="flex items-center justify-center">
+            <div class="w-32 h-32">
+                <img
+                src="./assets/image/z7260042723175_e2b1dc5cf02650b1843489f52a86f093.jpg"
+                alt="avatar"
+                class="w-full h-full rounded-full object-cover"
+                />
+            </div>
+        </div>
+
+
+            
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div
+          class="bg-gradient-to-r from-pink-400 via-rose-400 to-pink-500 p-6 text-center"
+        >
+          <button
+            onclick="location.reload()"
+            class="bg-white text-pink-600 font-bold px-8 py-4 rounded-full hover:bg-pink-50 transition-all duration-300 hover:scale-105 shadow-lg text-lg"
+          >
+            🔄 Xem lại từ đầu
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="confettiContainer"></div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
